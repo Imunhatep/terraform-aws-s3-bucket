@@ -52,7 +52,7 @@
 | enable\_standard\_ia\_transition | Enables the transition to STANDARD\_IA | `bool` | `false` | no |
 | enabled | Set to false to prevent the module from creating any resources | `bool` | `null` | no |
 | environment | Environment, e.g. 'uw2', 'us-west-2', OR 'prod', 'staging', 'dev', 'UAT' | `string` | `null` | no |
-| expiration\_date | Specifies the date after which you want the corresponding action to take effect | `string` | `""` | no |
+| expiration\_date | Specifies the date after which you want the corresponding action to take effect | `string` | `null` | no |
 | expiration\_days | Number of days after which to expunge the objects | `number` | `90` | no |
 | expiration\_expired\_object\_delete\_marker | Direct Amazon S3 to delete expired object delete markers. This cannot be specified with Days or Date in a Lifecycle Expiration Policy | `bool` | `false` | no |
 | force\_destroy | A boolean string that indicates all objects should be deleted from the bucket so that the bucket can be destroyed without error. These objects are not recoverable | `bool` | `false` | no |
