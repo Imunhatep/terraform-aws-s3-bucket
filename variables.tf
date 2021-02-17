@@ -28,10 +28,16 @@ variable "force_destroy" {
   description = "A boolean string that indicates all objects should be deleted from the bucket so that the bucket can be destroyed without error. These objects are not recoverable"
 }
 
-variable "versioning_enabled" {
+variable "bucket_versioning" {
   type        = bool
   default     = true
   description = "A state of versioning. Versioning is a means of keeping multiple variants of an object in the same bucket"
+}
+
+variable "versioning_enabled" {
+  type        = bool
+  default     = true
+  description = "A state of versioning. Controls versioning state enabled/suspended"
 }
 
 variable "logging" {

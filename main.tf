@@ -9,7 +9,7 @@ resource "aws_s3_bucket" "default" {
   tags          = module.this.tags
 
   dynamic "versioning" {
-    for_each = var.versioning_enabled == null ? [] : [1]
+    for_each = var.bucket_versioning ? [1] : [0]
 
     content {
       enabled = var.versioning_enabled
