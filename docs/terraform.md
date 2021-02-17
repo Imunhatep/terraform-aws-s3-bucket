@@ -84,7 +84,6 @@
 | tags | Additional tags (e.g. `map('BusinessUnit','XYZ')` | `map(string)` | `{}` | no |
 | user\_enabled | Set to `true` to create an IAM user with permission to access the bucket | `bool` | `false` | no |
 | versioning\_enabled | A state of versioning. Versioning is a means of keeping multiple variants of an object in the same bucket | `bool` | `true` | no |
-| versioning\_suspended | A state of versioning. If versioning is enabled, setting this to true will set versioning in suspended state | `bool` | `false` | no |
 
 ## Outputs
 
