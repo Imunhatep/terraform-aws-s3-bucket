@@ -225,7 +225,9 @@ Available targets:
 | enable\_standard\_ia\_transition | Enables the transition to STANDARD\_IA | `bool` | `false` | no |
 | enabled | Set to false to prevent the module from creating any resources | `bool` | `null` | no |
 | environment | Environment, e.g. 'uw2', 'us-west-2', OR 'prod', 'staging', 'dev', 'UAT' | `string` | `null` | no |
+| expiration\_date | Specifies the date after which you want the corresponding action to take effect | `string` | `""` | no |
 | expiration\_days | Number of days after which to expunge the objects | `number` | `90` | no |
+| expiration\_expired\_object\_delete\_marker | Direct Amazon S3 to delete expired object delete markers. This cannot be specified with Days or Date in a Lifecycle Expiration Policy | `bool` | `false` | no |
 | force\_destroy | A boolean string that indicates all objects should be deleted from the bucket so that the bucket can be destroyed without error. These objects are not recoverable | `bool` | `false` | no |
 | glacier\_transition\_days | Number of days after which to move the data to the glacier storage tier | `number` | `60` | no |
 | grants | An ACL policy grant. Conflicts with `acl`. Set `acl` to `null` to use this. | <pre>list(object({<br>    id          = string<br>    type        = string<br>    permissions = list(string)<br>    uri         = string<br>  }))</pre> | `null` | no |
@@ -255,6 +257,7 @@ Available targets:
 | tags | Additional tags (e.g. `map('BusinessUnit','XYZ')` | `map(string)` | `{}` | no |
 | user\_enabled | Set to `true` to create an IAM user with permission to access the bucket | `bool` | `false` | no |
 | versioning\_enabled | A state of versioning. Versioning is a means of keeping multiple variants of an object in the same bucket | `bool` | `true` | no |
+| versioning\_suspended | A state of versioning. If versioning is enabled, setting this to true will set versioning in suspended state | `bool` | `false` | no |
 
 ## Outputs
 

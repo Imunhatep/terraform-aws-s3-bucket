@@ -58,8 +58,8 @@ resource "aws_s3_bucket" "default" {
       for_each = var.enable_current_object_expiration ? [1] : []
 
       content {
-        days = var.expiration_days
-        date = var.expiration_date
+        days                         = var.expiration_days
+        date                         = var.expiration_date
         expired_object_delete_marker = var.expiration_expired_object_delete_marker
       }
     }
