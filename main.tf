@@ -12,7 +12,7 @@ resource "aws_s3_bucket" "default" {
     for_each = var.versioning_enabled ? [1] : []
 
     content {
-      enabled = var.versioning_enabled
+      enabled = var.versioning_suspended ? false : true
     }
   }
 
@@ -59,6 +59,8 @@ resource "aws_s3_bucket" "default" {
 
       content {
         days = var.expiration_days
+        date = var.expiration_date
+        expired_object_delete_marker = var.expiration_expired_object_delete_marker
       }
     }
   }
