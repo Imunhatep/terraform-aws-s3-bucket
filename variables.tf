@@ -148,7 +148,7 @@ variable "expiration_days" {
 
 variable "expiration_date" {
   type        = string
-  default     = ""
+  default     = null
   description = "Specifies the date after which you want the corresponding action to take effect"
 }
 
