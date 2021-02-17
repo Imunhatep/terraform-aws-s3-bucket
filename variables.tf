@@ -34,12 +34,6 @@ variable "versioning_enabled" {
   description = "A state of versioning. Versioning is a means of keeping multiple variants of an object in the same bucket"
 }
 
-variable "versioning_suspended" {
-  type        = bool
-  default     = false
-  description = "A state of versioning. If versioning is enabled, setting this to true will set versioning in suspended state"
-}
-
 variable "logging" {
   type = object({
     bucket_name = string
